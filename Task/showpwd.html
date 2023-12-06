@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Password</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <label for="Password">Password</label>
+    <input type="password" name="" id="pwd"  >
+    
+    <span id="">
+        <i class="fa-solid fa-eye" onclick="showpwd()"></i>
+        <!-- <i class="fa-solid fa-eye-slash" onclick="showpwd()"></i> -->
+    </span>
+
+    <script>
+        function showpwd() {
+            let p = document.getElementById("pwd");
+            if (p.type == "password") {
+                p.type = "text";
+            } else {
+               p.type = "password"; 
+            }
+        }
+    </script>
+</body>
+</html>

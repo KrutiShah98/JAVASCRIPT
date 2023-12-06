@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validation</title>
+</head>
+<body>
+    <div class="form"></div>
+    <h1>Form in JS</h1>
+    <label for="uname">UserName : </label>
+    <input type="text" name="uname" id="name" onblur="handleusername()"><br><br>
+    <span id="error1"></span>
+
+
+    <label for="pass">Password:</label><br>
+    <input type="password" name="pass" id="pass" onblur="handleuserpass()"><br><br>
+    <span id="pass"></span>
+    <label for="Email">Email:</label><br>
+    <input type="email" name="mail" id="mail" onblur="handleuseremail()"><br><br>
+    <span id="pass"></span>
+
+    <label for="Phone">Contact NO.</label><br>
+    <input type="number" name="no" id="no" onblur="handlecontact()"><br><br>
+    <span id="pass"></span>
+
+
+    <!-- script starts from here -->
+<script>
+    function handleusername(){
+       let UserName = document.getElementById("name").value;
+       console.log(UserName); 
+       if (UserName == " ") {
+        document.getElementById('error1').innerText = "Enter Your name"
+        console.log('username is madanatory!');
+       } else {
+        document.getElementById('error1').innerText = " "
+        console.log('user name is' + UserName);
+       }
+    }
+</script>
+
+
+
+</body>
+</html>
