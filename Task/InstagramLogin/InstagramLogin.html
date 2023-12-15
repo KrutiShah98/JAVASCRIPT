@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login .Instagram</title>
+    <link rel="stylesheet" href="InstagramLogin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+    <div class="loginpage">
+        <div class="">
+            <img src="../../Image/instagram-wordmark.svg" alt="" class="logo">
+        </div>
+        <div class="userlogin">
+            <p id="ph"  oninput="handletransform()">Phone number, username, or email</p>
+            <input type="text" name="" id="log" class="user" oninput="handletransform()" placeholder="">
+        </div>
+        <div class="userpwd">
+            <p id="ps" oninput="handletransform()">Password</p>
+
+            <input type="password" name="" id="pass"  oninput="handletransform()" class="pwd" placeholder=""
+             onclick="show() ">
+             <span id="sh" onclick="handlevalidation() ">Show</span>
+        </div>
+        <div class="loginbtn">
+            <button class="log">Log in</button>
+        </div>
+        <div class="or">
+            <p class="orc"> _______________ OR ______________</p>
+        </div>
+        <div class="face">
+            <i class="fa-brands fa-square-facebook" style="color: #213454;">
+            </i>
+            <div>
+                <p class="facebook"> Log in with Facebook</p>
+            </div>
+        </div>
+        <div class="forgot">
+            <p>Forgot password?</p>
+        </div>
+
+    </div>
+    <div class="signup">
+        <p class="acc">Don't have an account?
+            <span style="color:  rgb(0, 149, 246);"> Sign up</span> </p>
+    </div>
+
+    <div class="get">
+        <p>Get the app.</p>
+    </div>
+    <div class="plst">
+        <img src="../../Image/c5Rp7Ym-Klz.png" alt="">
+        <img src="../../Image/EHY6QnZYdNX.png" alt="">
+    </div>
+
+    <script>
+        function handlevalidation() {
+            let x = document.getElementById("pass");
+            if (x.type === "password") {
+                x.type = "text";
+                document.getElementById("sh").innerText="Hide";
+            } else {
+                document.getElementById("sh").innerText="Show";
+                x.type = "password";
+            }
+        }
+        function handletransform(){
+if(document.getElementById("pass").value!=""){
+    document.getElementById("ph").style.fontSize="2px";
+    document.getElementById("ph").style.transition="0.2s";
+    document.getElementById("first").style.top = "1px";
+
+}
+else{
+    document.getElementById("log").style.fontSize="12px";
+    document.getElementById("sh").style.display = "none";
+}
+        }
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        // function dtu2(){
+        //     if(document.getElementById("pass-id").value!=""){
+        //         document.getElementById("first").style.fontSize = "9px";
+        //         document.getElementById("first").style.top = "1px";
+        //         document.getElementById("first").style.transition = "0.1s";
+        //         document.getElementById("show").style.display = "block";
+                
+        //     }
+        //     else{
+        //         document.getElementById("show").style.display = "none";
+        //         document.getElementById("first").style.top = "8px";
+        //         document.getElementById("first").style.fontSize = "13px";
+
+        //     }
+        
+
+    </script>
+</body>
+
+</html>
