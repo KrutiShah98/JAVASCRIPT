@@ -104,13 +104,13 @@
     padding-left: 4px;
 }
 
-#ph{
+.phn{
 position: absolute;
 top: 22%;
 color: rgb(196, 195, 195);
 font-size: 14px;
 }
-#ps{
+.ps{
     position: absolute;
     top: 29%;
     color: rgb(196, 195, 195);

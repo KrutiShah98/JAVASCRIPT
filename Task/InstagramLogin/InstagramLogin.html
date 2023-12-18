@@ -16,11 +16,11 @@
             <img src="../../Image/instagram-wordmark.svg" alt="" class="logo">
         </div>
         <div class="userlogin">
-            <p id="ph"  oninput="handletransform()">Phone number, username, or email</p>
+            <p id="ph" class="phn" oninput="handletransform()">Phone number, username, or email</p>
             <input type="text" name="" id="log" class="user" oninput="handletransform()" placeholder="">
         </div>
         <div class="userpwd">
-            <p id="ps" oninput="handletransform()">Password</p>
+            <p id="ph" class="ps" oninput="handletransform()">Password</p>
 
             <input type="password" name="" id="pass"  oninput="handletransform()" class="pwd" placeholder=""
              onclick="show() ">
@@ -68,16 +68,22 @@
                 x.type = "password";
             }
         }
-        function handletransform(){
+        
+        
+function handletransform(){
 if(document.getElementById("pass").value!=""){
     document.getElementById("ph").style.fontSize="2px";
     document.getElementById("ph").style.transition="0.2s";
-    document.getElementById("first").style.top = "1px";
+    document.getElementById("ph").style.top = "1px";
+    document.getElementById("sh").style.display = "block";
+
 
 }
 else{
-    document.getElementById("log").style.fontSize="12px";
+    document.getElementById("ph").style.fontSize="12px";
     document.getElementById("sh").style.display = "none";
+           document.getElementById("ph").style.top = "125px";
+
 }
         }
 
