@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Converter</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: rgb(147, 199, 201);
+        }
+
+        .heading {
+            text-align: center;
+            color: rgb(6, 17, 26);
+            font-size: 50px;
+        }
+
+        .inp {
+            border: 5px solid rgb(27, 12, 12);
+            width: 500px;
+            height: 50px;
+            margin-left: 30%;
+            margin-top: 50px;
+
+        }
+
+        .btns {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        button{
+            background-color: aliceblue;
+            padding: 20px;
+            margin: 10px;
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="heading">Text Converter</h1>
+    <input type="text" class="inp" id="result"  placeholder="Please Enter your Text here!!">
+    <div class="btns">
+        <div>
+            <button onclick="lowercase()"> Lower Case</button>
+            <button onclick="uppercase()">Upper Case</button>
+            <button onclick="trim()">Trim</button>
+        </div>
+        <button onclick="length()">length</button>
+        <button onclick="replace()">Replace with Hello</button>
+        <button onclick="split()">Split</button>
+        <!-- <button onclick="trim()">Trim</button>
+    <button onclick="trim()">Trim</button> -->
+    </div>
+    
+    <script>
+        function lowercase(){
+            let a=document.getElementById("result").value;
+            document.getElementById("result").value=a.toLowerCase()
+        }
+        function uppercase(){
+            let b=document.getElementById("result").value;
+            document.getElementById("result").value=b.toUpperCase()
+        }
+        
+        function trim(){
+            let c=document.getElementById("result").value;
+            document.getElementById("result").value=c.trim()
+        }
+        function length(){
+            let c=document.getElementById("result").value;
+           document.getElementById("result").value=c.length
+        }
+        function replace(){
+            let d=document.getElementById("result").value;
+            document.getElementById("result").value=d.replace(d,'Hello')
+        }
+        function split(){
+            let e=document.getElementById("result").value;
+            document.getElementById("result").value=e.split("")
+        }
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>
