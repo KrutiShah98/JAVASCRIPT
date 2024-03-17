@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q&A in JS</title>
+    <style>
+        .subcontainer .que{
+            height: 20px;
+        
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="que">
+            <h1>What is Html</h1>
+
+        </div>
+        <div class="ans">
+            <h1>HyperTextMarkup language</h1>
+            
+        </div>
+
+        <div class="que">
+            <h1>What is Html</h1>
+
+        </div>
+        <div class="ans">
+            <h1>HyperTextMarkup language</h1>
+            
+        </div>
+    </div>
+
+    <script>
+        var allque= document.querySelectorAll(".subcontainer .que");
+        console.log(allque);
+
+        que.addeventlistener("click",function(){
+            var ans=this.nextElementSibling;
+            if(ans.style.display=="block")
+            {
+ans.style.display="none"
+            }
+            else{
+                ans.style.display="block"
+            }
+        })
+
+    </script>
+</body>
+</html>

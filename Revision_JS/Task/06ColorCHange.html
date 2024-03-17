@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color CHange</title>
+    <style>
+        .btnclass{
+            background-color: rgb(46, 91, 131);
+            color: white;
+            width: 100px;
+        }
+        #colordiv{
+            margin: 0 auto;
+            width: 40%;
+        }
+        .mycolor{
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+
+</head>
+<div id="colordiv"></div>
+<body>
+    <script>
+        var input=document.createElement("input");
+        input.type="text";
+        input.placeholder="Enter Color:";
+        input.name="name";
+        input.id="colorid";
+
+        var div=document.getElementById("colordiv");
+        div.append(input);
+
+        var btn=document.createElement("button");
+        btn.classList.add("btnclass")
+        btn.textContent="ADD";
+        div.append(btn);
+
+        btn.addEventListener("click",function(){
+            var newcolor= document.createElement("div");
+            // console.log(newcolor);
+            newcolor.classList.add("mycolor");
+            console.log(newcolor);
+            div.appendChild(newcolor);
+            
+            var inpvalue=document.getElementById("colorid").value;
+            newcolor.textContent=inpvalue;
+            // console.log(inpvalue);
+            newcolor.style.backgroundColor=inpvalue;
+            newcolor.className="classcolor";
+            
+            var ic=document.querySelectorAll(".classcolor");
+
+            ic.forEach(function(e,i){
+                e.addEventListener("click",function(){
+                    console.log(this.innerText);
+                    document.body.style.background=this.innerText
+
+                })
+
+            })
+
+        })
+
+
+
+
+    </script>
+</body>
+</html>

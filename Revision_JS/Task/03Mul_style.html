@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Style CHange</title>
+    <style>
+        .colorclass {
+            background-color: antiquewhite;
+            color: brown;
+        }
+
+        .colorclassh2 {
+            background-color: aqua;
+            color: chocolate;
+        }
+        .h3color{
+            background-color: rgb(22, 5, 49);
+            color: rgb(109, 90, 77);
+        }
+        .h4color{
+            background-color: rgb(100, 60, 14);
+            color: rgb(240, 231, 225);
+        }
+        .h5color{
+            background-color: rgb(42, 126, 60);
+            color: rgb(153, 197, 175);
+        }
+        .h6color{
+            background-color: rgb(49, 5, 23);
+            color: rgb(122, 62, 62);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>hii...</h1>
+    <h2>my</h2>
+    <h3>name</h3>
+    <h4>is</h4>
+    <h5>kruti</h5>
+    <h6>shah</h6>
+
+
+    <h1>hii...</h1>
+    <h2>my</h2>
+    <h3>name</h3>
+    <h4>is</h4>
+    <h5>kruti</h5>
+    <h6>shah</h6>
+
+    <h1>hii...</h1>
+    <h2>my</h2>
+    <h3>name</h3>
+    <h4>is</h4>
+    <h5>kruti</h5>
+    <h6>shah</h6>
+
+
+    <script>
+        var alldatah1 = document.querySelectorAll('h1');
+        alldatah1.forEach(function (element) {
+            element.classList.add("colorclass")
+        })
+
+        var alldatah2 = document.querySelectorAll("h2");
+        alldatah2.forEach(function (e2) {
+            e2.classList.add("colorclassh2")
+        })
+
+        var h3=document.querySelectorAll("h3");
+        h3.forEach(function(e3){
+            e3.classList.add("h3color")
+        })
+
+        var h4=document.querySelectorAll("h4");
+        h4.forEach(function(e4){
+            e4.classList.add("h4color")
+        })
+
+        var h5=document.querySelectorAll("h5");
+        h5.forEach(function(e5){
+            e5.classList.add("h5color")
+        })
+
+        var h6=document.querySelectorAll("h6");
+        h6.forEach(function(e6){
+            e6.classList.add("h6color")
+        })
+
+    </script>
+</body>
+
+</html>

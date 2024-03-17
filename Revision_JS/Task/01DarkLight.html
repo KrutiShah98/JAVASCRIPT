@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Light Mode</title>
+    <style>
+    /* <!-- darklight mode button --> */
+
+        .toggle-switch {
+  position: relative;
+  width: 100px;
+  height: 50px;
+  --light: #d8dbe0;
+  --dark: #28292c;
+  --link: rgb(27, 129, 112);
+  --link-hover: rgb(24, 94, 82);
+  margin: 0 auto;
+}
+
+.switch-label {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  background-color: var(--dark);
+  border-radius: 25px;
+  cursor: pointer;
+  border: 3px solid var(--dark);
+}
+
+.checkbox {
+  position: absolute;
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.checkbox:checked ~ .slider {
+  background-color: var(--light);
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  -webkit-box-shadow: inset 12px -4px 0px 0px var(--light);
+  box-shadow: inset 12px -4px 0px 0px var(--light);
+  background-color: var(--dark);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.checkbox:checked ~ .slider::before {
+  -webkit-transform: translateX(50px);
+  -ms-transform: translateX(50px);
+  transform: translateX(50px);
+  background-color: var(--dark);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.box1,.box2{
+border: 1px solid rgb(36, 3, 3);
+margin-top: 20px;
+}
+.colorchange{
+    background-color: black;
+    color: aliceblue;
+}
+/* .body{
+    background-color: #28292c;
+}
+ */
+
+    </style>
+</head>
+<body class="colorchange">
+    <!-- darklight mode button -->
+    <div class="toggle-switch" id="onoff">
+        <label class="switch-label">
+          <input type="checkbox" class="checkbox">
+          <span class="slider"></span>
+        </label>
+      </div> 
+      
+      
+    <div class="box1">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, possimus.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, possimus.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, possimus.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, possimus.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, possimus.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, possimus.</p>
+
+
+    </div>
+    <div class="box2">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam accusantium, hic aspernatur natus minima est!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam accusantium, hic aspernatur natus minima est!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam accusantium, hic aspernatur natus minima est!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam accusantium, hic aspernatur natus minima est!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam accusantium, hic aspernatur natus minima est!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam accusantium, hic aspernatur natus minima est!</p>
+
+    </div>
+
+     <script>
+        var darkon=document.getElementById("onoff");
+        darkon.addEventListener("click",function(){
+            var allp=document.querySelectorAll("p");
+
+            allp.forEach(function(element){
+                element.classList.add("colorchange");
+            })
+        })
+
+    </script> 
+
+    <!-- <script>
+      var darkon=document.getElementById
+    </script> -->
+</body>
+</html>

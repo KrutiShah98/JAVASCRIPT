@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image SHow</title>
+    <style>
+        .thumbnail img{
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+        }
+        .maincontianer img{
+            height: 300px;
+            width: 300px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="thumbnail">
+        <img src="../Images/burger.png" alt="">
+        <img src="../Images/c3img.png" alt="">
+        <img src="../Images/c5img.png" alt="">
+        <img src="../Images/Image.png" alt="">
+        <img src="../Images/Place Your Image Here (Double Click to Edit) (2).png" alt="">
+    </div>
+    <div class="maincontianer">
+        <img src="../Images/c5img.png" alt="">
+    </div>
+    <script>
+        var allthumbnails=document.querySelectorAll(".thumbnail img")
+        console.log(allthumbnails);
+
+        allthumbnails.forEach(function(thumbnail){
+            console.log(thumbnail);
+
+            thumbnail.addEventListener("click",function(){
+            // console.log("image click");
+
+            var imagePath=this.getAttribute("src");
+                // console.log(imagePath);
+
+               var mainPreview=document.querySelector(".maincontianer img");
+               console.log(mainPreview)
+
+
+                mainPreview.setAttribute("src",imagePath);
+             })
+        })
+    </script>
+</body>
+</html>

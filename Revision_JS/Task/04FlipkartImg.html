@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLipkart</title>
+    <style>
+        .thumbnail img{
+            width: 150px;
+            height: 120px;
+            border: 1px solid black;
+        }
+        .main img{
+            width:500px ;
+            height: 520px;
+            border: 1px solid black;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="thumbnail">
+        <img src="Images/i1.webp" alt="">
+        <img src="Images/i2.webp" alt="">
+        <img src="Images/i3.webp" alt="">
+        <img src="Images/i4.webp" alt="">
+        <img src="Images/i5.webp" alt="">
+
+    </div>
+    <div class="main">
+        <img src="Images/i1.webp" alt="">
+    </div>
+    <script>
+        var tn=document.querySelectorAll(".thumbnail img");
+        tn.forEach(function(thumbnail){
+            thumbnail.addEventListener("click",function(){
+                var imgp=this.getAttribute("src");
+                var mainview=document.querySelector(".main img")
+                mainview.setAttribute("src",imgp)
+            })
+        })
+    </script>
+</body>
+</html>

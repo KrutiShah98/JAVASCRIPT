@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="mydiv">
+
+    </div>
+    <script>
+        var input=document.createElement("input");
+
+        input.type="text";
+        input.placeholder="enter name";
+        input.name="name";
+        input.id="nameid";
+        
+        var div=document.getElementById("mydiv");
+        div.append(input);
+
+        var btn=document.createElement("button");
+        btn.textContent="add";
+        btn.id="btnadd";
+
+
+        div.appendChild(btn);
+        btn.addEventListener("click",function(){
+            var youname=document.getElementById("nameid").value;
+            var li=document.createElement("li") ;
+            li.textContent=youname;
+            
+        })
+
+    </script>
+</body>
+</html>

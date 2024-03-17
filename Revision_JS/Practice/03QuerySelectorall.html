@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query Selector all</title>
+    <style>
+           .myclass{
+            background-color: rgb(240, 255, 255);
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>hii</h1>
+    <h2>welcome</h2>
+    <h1>js</h1>
+
+    <button id="mybtn">CHange</button>
+    <script>
+        var mybtnvar=document.getElementById('mybtn');
+        mybtnvar.addEventListener("click",function(){
+            var allh1=document.querySelectorAll('h1');
+            allh1.forEach(function(element){
+                element.classList.add("myclass")
+            })
+        })
+    </script>
+</body>
+</html>
