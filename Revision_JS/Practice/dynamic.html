@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" onclick="addData()">
+        <input type="text" id="nameid" placeholder="Enter Name">
+        <input type="text" id="subid" placeholder="Enter Name">
+        <input type="text" id="cityid" placeholder="Enter city">
+        <input type="submit">
+    </form>
+
+    <script>
+
+        function addData() {
+            let name = document.getElementById("nameid");
+            let subject = document.getElementById("subid");
+            let city = document.getElementById("cityid");
+
+            let existingData = JSON.parse(localStorage.getItem("student")) || [];
+
+            let obj = {
+                name: name.value,
+                subject: subject.value,
+                city: city.value
+            }
+
+            existingData.push(obj);
+             localStorage.setItem("student",JSON.stringify(existingData))
+
+        }
+
+    </script>
+</body>
+
+</html>

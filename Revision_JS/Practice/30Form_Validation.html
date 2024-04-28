@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="return checkValidation(event)">
+    <input type="text" id="nameid" placeholder="enter NAme">
+    <br>
+    <input type="email" id="emailid" placeholder="enter Email">
+    <br>
+    <input type="submit" name="submit" value="submit">
+    <br>
+
+</form>
+
+<script>
+    function checkValidation(e)
+    {
+        e.preventDefault();
+        let name=document.getElementById("nameid");
+        let email=document.getElementById("emailid");
+
+        let emailPattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$";
+        let passwordPattern=""
+        console.log(name.value);
+        console.log(email.value);
+
+        if(name.value.length==0)
+        {
+            alert("name is Required");
+            // let p=document.getElementById("mypid");
+            // p.textContent="name required";
+            // p.style.color="red";
+            return false;
+        }
+        if(!isNaN(name.value))
+        {
+            alert("Only Characters Required");
+            return false;
+
+        }
+        if(name.value.length<8)
+        {
+            alert("name must be 8 or more characters required");
+            return false;
+        }
+        if(emailPattern.test(email.value))
+        {
+            alert("invalid email address");
+            return false;
+
+        }
+        return true;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="checkbox" name="" id="SelectAllCheckbox">Select All
+    <br>
+    <br>
+    <input type="checkbox" name="" id="" class="subject">C language
+    <br>
+    <input type="checkbox" name="" id="" class="subject">Maths
+    <br>
+    <input type="checkbox" name="" id="" class="subject">Science
+    <br>
+    <input type="checkbox" name="" id="" class="subject">Android
+    <br>
+    <input type="checkbox" name="" id="" class="subject">React
+    <br>
+
+    <script>
+        let SelectAll = document.getElementById("SelectAllCheckbox");
+        console.log(SelectAll);
+
+        let SubjectAll = document.querySelectorAll(".subject");
+        console.log(SubjectAll);
+        console.log(SelectAll.checked);
+
+        SelectAll.addEventListener("change", function () {
+            console.log("change");
+            console.log(SelectAll.checked);
+            SubjectAll.forEach(function (single_checkbox) {
+                single_checkbox.checked = SelectAll.checked;
+            })
+        })
+
+
+
+        SubjectAll.forEach(function (single_checkbox) {
+            single_checkbox.addEventListener("change", function () {
+                console.log("clicked");
+                let x = true;
+                SubjectAll.forEach((elem) => {
+                    if (!elem.checked) {
+                        x = false;
+                    }
+                })
+                SelectAll.checked = x;
+            })
+        })
+
+
+
+//     if(SubjectAll.checked)
+//     {
+//         SelectAll.checked=true;
+//     }
+//     else
+//     {
+//         SelectAll.checked=false;
+
+//     }
+
+    // if(SelectAll.checked)
+    // {
+    //     SubjectAll.forEach(function(single_checkbox){
+    //         single_checkbox.checked=true;
+    //     })
+    // }
+    // else
+    // {
+    //     SubjectAll.forEach(function(single_checkbox){
+    //         single_checkbox.checked=false;
+    //     })
+    // }
+// })
+        SubjectAll.forEach(function (single_checkbox) {
+            single_checkbox.addEventListener("change", function () {
+                console.log("clicked");
+                if (!single_checkbox.checked) {
+                    SelectAll.checked = false;
+                }
+                // else
+                // {
+                //     SelectAll.checked=true;
+                // }
+            })
+        })
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Parent{
+            constructor(name)
+            {
+                console.log("this is parent class");
+                console.log(name);
+            }
+        }
+
+        class Child extends Parent{
+            constructor(name,subject){
+                super(name);
+                this.subject=subject;
+                console.log("this is child class");
+            }
+            display()
+            {
+             console.log("subject display:",this.subject);
+            }
+
+        }
+        //object creation
+        let obj=new Child("AAA","MERN");
+
+        obj.display();
+    </script>
+</body>
+</html>

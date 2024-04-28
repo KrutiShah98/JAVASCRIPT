@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hi</h1>
+    <h3>Hello GM</h3>
+
+    <script>
+        var h1=document.querySelector("h1");
+        console.log(h1);
+
+        var h3=document.querySelector("h3");
+        console.log(h3);
+
+        var h2=document.createElement("h2");
+        // console.log(h2);
+        h2.textContent="Hello this is h2";
+
+        // document.body.append(h2);
+
+        document.body.insertBefore(h2,h3);
+
+    </script>
+</body>
+</html>

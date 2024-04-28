@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const Vehicle={
+            name: "vehicle",
+            brand: "vehicle",
+            display: function(){
+                console.log("vehicle method");
+            }
+        }
+
+        // Object creation
+
+        let carobj=Object.create(Vehicle);
+
+        carobj.name="Hyundai";
+        carobj.model="Xseno";//memeber add
+        carobj.display()
+
+        carobj.myMethod+function(){  //method  add
+            console.log("car method");
+        }
+    </script>
+</body>
+
+</html>

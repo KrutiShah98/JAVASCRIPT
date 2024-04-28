@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asian Paint Color Catalogue</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(178, 84, 84);
+        }
+
+        #bg {
+            width: 500px;
+            /* display: flex; */
+            /* justify-content: center; */
+            /* flex-direction: column; */
+            margin: 0 auto;
+            /* margin-bottom: 100px; */
+            background-repeat: no-repeat;
+            background: no-repeat center center/cover;
+            position: relative;
+            height: 230px;
+
+        }
+
+        #bg img {
+            width: 500px;
+
+            /* height: 500px; */
+            position: absolute;
+            bottom: 0;
+            top: -11px;
+            border: 2px white solid;
+            margin-top: 8px;
+
+        }
+
+        .wallpaper {
+            display: flex;
+            justify-content: space-evenly;
+            padding: 50px 0px;
+            flex-wrap: wrap;
+            flex-direction: column;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        .wallpaper img {
+            width: 100px;
+            height: 100px;
+            border: 2px solid rgb(4, 1, 1);
+            border-radius: 5px;
+            padding: 10px;
+
+        }
+
+        h1 {
+            text-align: center;
+            color: rgb(88, 3, 49);
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            padding: 15px;
+        }
+
+        .bgw:hover {
+            border: 2px rgb(62, 25, 27) solid;
+            padding: 0;
+            animation: vibrate 0.5s;
+            transform: rotate(-2deg);
+
+  /* When the animation is finished, start again */
+  animation-iteration-count: infinite;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>AsianPaint Color Catalogue</h1>
+    </div>
+
+    <div id="bg">
+        <img src="Images/new-aqua-onyx-stone-texture-marble-wallpaper-mural (1).png" alt="" class="wallpaperbg">
+
+    </div>
+
+
+    <div class="wallpaper">
+        <div>
+            <img src="Images/wp1.webp" alt="" class="bgw">
+            <img src="Images/wp2.webp" alt="" class="bgw">
+            <img src="Images/sand-2005066_1280.jpg" alt="" class="bgw">
+            <img src="Images/wp4.webp" alt="" class="bgw">
+            <img src="Images/wp5.webp" alt="" class="bgw">
+        </div>
+        <div>
+            <img src="Images/wp61.jpg" alt="" class="bgw">
+            <img src="Images/wp7.jpg" alt="" class="bgw">
+            <img src="Images/wp8.png" alt="" class="bgw">
+            <img src="Images/wp9.jpg" alt="" class="bgw">
+            <img src="Images/wp11.jpg" alt="" class="bgw">
+        </div>
+
+    </div>
+
+    <script>
+
+        var wpclick = document.querySelectorAll(".wallpaper img");
+        console.log(wpclick);
+        wpclick.forEach(function (backimg) {
+            backimg.addEventListener("click", function () {
+                var imgp = this.getAttribute("src");
+                console.log(imgp);
+                var view = document.querySelector("#bg");
+                console.log(view);
+                view.style.background = `url(${imgp})`
+
+            })
+        })
+    </script>
+</body>
+
+</html>

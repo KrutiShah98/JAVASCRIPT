@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Student
+        {
+            constructor(id,name)
+            {
+                this.id=id;
+                this.name=name;
+            }
+            setName(name)
+            {
+                this.name= name;
+
+            }
+            getName()
+            {
+                return this.name;
+            }
+            setSubject(subjectname)
+            {
+                this.subject=subjectname;
+            }
+            getSubject()
+            {
+                return this.subject;
+            }
+        }
+        let obj=new Student();
+
+        obj.setName("js student");
+
+        console.log(obj.getName());
+         obj.setSubject("Javascript");
+         console.log(obj.getSubject());
+    </script>
+</body>
+</html>

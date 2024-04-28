@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .mydiv
+        {
+            background-color: blue;
+            height: 300px;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="mydiv"></div>
+    <script>
+        var div = document.querySelector(".mydiv");
+        var marginCounter = 0;
+        document.addEventListener("keydown",function(e){
+            console.log(e.key);
+            if(e.key === "ArrowRight")
+            {
+                // document.querySelector(".mydiv").style.backgroundColor= "red";
+                
+                div.style.marginLeft = marginCounter+"px";
+                marginCounter+=20;
+            }
+        })
+
+        document.addEventListener("keyup",function(e){
+            console.log("keyup");
+        })
+
+        div.addEventListener("mouseover",function(){
+            div.style.backgroundColor = "red";
+        })
+        div.addEventListener("mouseout",function(){
+            div.style.backgroundColor = "blue";
+        })
+    </script>
+</body>
+</html>

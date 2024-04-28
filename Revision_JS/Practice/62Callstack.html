@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function display3() {
+             console.log("this is callstack");
+        }
+        function display2() {
+            display3();
+        }
+        function display1(pass2fun) {
+            // display2();
+            pass2fun()
+        }
+        function mainfunction(passanyfun)//it will acess function as parametr
+        {
+            // display1();
+            passanyfun(display2);
+        }
+        mainfunction(display1)
+    </script>
+</body>
+</html>
+
+
+

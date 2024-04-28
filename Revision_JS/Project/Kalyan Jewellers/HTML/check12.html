@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalyan Jwellers</title>
+  <link rel="stylesheet" href="../CSS/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="../JS/script.js"></script>
+
+</head>
+
+<body>
+
+
+  <section class="vh-100 gradient-custom">
+    <div class="container py-5 h-100">
+      <div class="row justify-content-center align-items-center h-100">
+        <div class="col-12 col-lg-9 col-xl-7">
+          <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+            <div class="card-body p-4 p-md-5">
+              <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Welcome to Kalyan Jewellers!</h3>
+              <form onsubmit="totalgold(event)">
+
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+
+                    <div class="form-outline">
+                      <input type="text" id="firstName" class="form-control form-control-lg" />
+                      <label class="form-label" for="firstName">First Name</label>
+                    </div>
+
+                  </div>
+                  <div class="col-md-6 mb-4">
+
+                    <div class="form-outline">
+                      <input type="text" id="lastName" class="form-control form-control-lg" />
+                      <label class="form-label" for="lastName">Last Name</label>
+                    </div>
+
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6 mb-4 d-flex align-items-center">
+
+                    <div class="form-outline datepicker w-100">
+                      <input type="text" class="form-control form-control-lg" id="birthdayDate" />
+                      <label for="birthdayDate" class="form-label">Birthday</label>
+                    </div>
+
+                  </div>
+                  <div class="col-md-6 mb-4">
+
+                    <h6 class="mb-2 pb-1">Gender: </h6>
+
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="femaleGender"
+                        value="option1" checked />
+                      <label class="form-check-label" for="femaleGender">Female</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="maleGender"
+                        value="option2" />
+                      <label class="form-check-label" for="maleGender">Male</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="otherGender"
+                        value="option3" />
+                      <label class="form-check-label" for="otherGender">Other</label>
+                    </div>
+
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6 mb-4 pb-2">
+
+                    <div class="form-outline">
+                      <input type="email" id="emailAddress" class="form-control form-control-lg" />
+                      <label class="form-label" for="emailAddress">Email</label>
+                    </div>
+
+                  </div>
+                  <div class="col-md-6 mb-4 pb-2">
+
+                    <div class="form-outline">
+                      <input type="tel" id="phoneNumber" class="form-control form-control-lg" />
+                      <label class="form-label" for="phoneNumber">Phone Number</label>
+                    </div>
+
+                  </div>
+                </div>
+
+
+                <div class="row">
+                  <div class="col-12">
+                    <label class="form-label select-label">Choose Product</label>
+
+
+                    <select class="select form-control-lg">
+                      <option value="1" disabled>Choose option</option>
+                      <option value="2">Ring</option>
+                      <option value="3">Bangles</option>
+                      <option value="4">Chain</option>
+                    </select>
+
+                  </div>
+                </div>
+
+
+                <div class="row mt-4 pt-2">
+                  <div class="col-12">
+                    <label class="form-label select-label">Enter Product in gms</label>
+
+                    <input type="number" name="" id="gmid" class="" onclick="" />
+
+
+                  </div>
+                </div>
+                <div class="mt-4 pt-2">
+                  <label class="form-label select-label" style="color: red;">Current Gold Price is Rs. 6405 per
+                    gm</label>
+                </div>
+
+                <div class="row mt-4 pt-2">
+                  <div class="col-12">
+                    <label class="form-label select-label f-lg" style="color:black;" id="">Total Gold Rate</label>
+
+                    <input type="number" name="" id="totalrate" class="" onclick="" />
+
+
+                  </div>
+                </div>
+
+                <div class="row mt-4 pt-2">
+                  <div class="col-12">
+                    <label class="form-label select-label f-lg" style="color:black;" id="">Making Charges (Per
+                      gm)</label>
+
+                    <input type="number" name="" id="totalrate" class="" onclick="" value="845" /><span>
+
+
+                  </div>
+                </div>
+
+                <div class="row mt-4 pt-2">
+                  <div class="col-12">
+                    <label class="form-label select-label f-lg" style="color:black;" id="">Total Making
+                      Charges</label>
+
+                    <input type="number" name="" id="mc_totalrate" class="" onclick="" />
+
+
+                  </div>
+                </div>
+
+                <div class="row mt-4 pt-2">
+                  <div class="col-12">
+                    <label class="form-label select-label f-lg" style="color:black;" id="">Total Amount</label>
+
+                    <input type="number" name="" id="totalamt" class="" onclick="" />
+
+
+                  </div>
+                </div>
+
+
+                <!-- DISCOUNT -->
+                <div class="row mt-4 pt-2">
+                  <div class="col-12">
+                    <label class="form-label select-label f-lg" style="color:black;" id="tg">Discount</label>
+
+                    <input type="number" name="" id="" class="" onclick="" />
+
+
+                  </div>
+                </div>
+
+                <div class="row mt-4 pt-2">
+                  <div class="col-12">
+                    <label class="form-label select-label f-lg" style="color:black;" id="tg">Discount Amount (Except
+                      Making Charges)</label>
+
+                    <input type="number" name="" id="" class="" onclick="" />
+
+
+                  </div>
+                </div>
+
+                <!-- TOTAL NET AMT -->
+                <div class="row mt-4 pt-2">
+                  <div class="col-12">
+                    <label class="form-label select-label f-lg fw-bolder" style="color:rgb(11, 15, 9);" id="tg">TOTAL
+                      NET AMOUNT</label>
+
+                    <input type="number" name="" id="netamt" class="" onclick="" />
+
+
+                  </div>
+                </div>
+
+                <div class="mt-4 pt-2">
+                  <input class="btn btn-primary btn-lg auto" type="submit" value="Submit"   />
+                </div>
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function totalgold(e)
+     {
+e.preventDefault();
+     }
+function data()
+{
+    // console.log('hii');
+    let gms = document.getElementById("gmid");
+    console.log(gms.value);
+
+      let goldprice = 6405;
+      let total_goldrate = document.getElementById("totalrate");
+      //  console.log(gms);
+
+    total_goldrate.value =(gms.value*goldprice);
+      
+      console.log('total gold rate : ',total_goldrate);
+      
+
+
+      
+ 
+    }
+    window.addEventListener("keydown", function (e) {
+      if (e.key == "Enter") {
+        data(event)
+      }
+
+    })
+    
+  
+  </script>
+</body>
+
+</html>

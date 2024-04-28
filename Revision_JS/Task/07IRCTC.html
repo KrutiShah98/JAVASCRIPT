@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IRCTC FORM</title>
+    <style>
+        *{
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    <div id="myid"></div>
+    <script>
+        // for name
+        var myname = document.getElementById("myid");
+        var input1 = document.createElement("input")
+        // console.log(input1);
+        input1.id = "input1";
+        input1.placeholder = "Enter your Name here";
+        myname.append(input1);
+// for age
+        var input2 = document.createElement("input");
+        // console.log(input2);
+        input2.type = "number"; 
+        input2.id = "input2";
+        input2.style.width = "50px";
+        input2.placeholder = "Age";
+
+        myname.append(input2);
+
+
+        // select option
+        var select1 = document.createElement("select");
+        var option1 = document.createElement("option");
+        option1.textContent = "male"
+        var option2 = document.createElement("option");
+        console.log(option2);
+
+        option2.textContent = "Female"
+        console.log(select1);
+        console.log(option1);
+        myname.append(select1);
+        select1.append(option1, option2);
+
+        // BIRTH PREFERANCE
+        var select2 = document.createElement("select");
+        var option3 = document.createElement("option");
+        var option4 = document.createElement("option");
+        var option5 = document.createElement("option");
+        option3.textContent = "MIDDLE";
+        option4.textContent = "LOWER";
+        option5.textContent = "UPPER";
+        myname.append(select2);
+        select2.append(option3, option4, option5);
+
+        // meal
+        var select3 = document.createElement("select");
+        var option6 = document.createElement("option");
+        var option7 = document.createElement("option");
+        option6.textContent = "VEG"
+        option7.textContent = " Non-Veg"
+        myname.append(select3);
+        select3.append(option6, option7);
+
+        // checkbox
+        var check = document.createElement("input")
+        check.type = "checkbox";
+        console.log(check);
+        myname.append(check);
+
+        var btn1 = document.createElement("button");
+        btn1.textContent ="clickme";
+        myname.append(btn1);
+        btn1.id = "mybtn";
+
+        document.getElementById("mybtn").addEventListener("click",function()
+        {
+
+            // console.log(input1.value);
+            // console.log(input2.value);
+
+        var tab = document.createElement("table")
+        tab.class ="tab1";
+        tab.style.border = "2px solid black"
+        var roww = document.createElement("tr");
+        var data1 = document.createElement("td");
+        var data2 = document.createElement("td");
+        var data3 = document.createElement("td");
+        var data4 = document.createElement("td");
+        var data5 = document.createElement("td");
+        var data6= document.createElement("td");
+        var btn2 = document.createElement("button")
+        btn2.textContent = "x"
+        btn2.id='myid'
+        data6.append(btn2)
+
+           let btn3= document.getElementById('myid');
+           console.log(btn3);
+           btn3.addEventListener('click',function ()
+            {
+                console.log(this);
+           })
+
+  
+        // myname.append(tab,roww,);
+        data1.textContent = input1.value;
+        data2.textContent = input2.value;
+        data3.textContent = select1.value;
+        data4.textContent = select2.value;
+        data5.textContent = select3.value;
+        // input2 value
+        
+        roww.append(data1,data2,data3,data4,data5,data6);
+        tab.append(roww);
+        myname.append(tab)
+
+       let no = document.querySelectorAll(".tab1 tr");
+       console.log(no);
+        })
+  
+        
+    </script>
+</body>
+</html>

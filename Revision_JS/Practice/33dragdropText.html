@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dragContainer{
+            height: 150px;
+            width: 150px;
+            background-color: green;
+            cursor: pointer;
+        }
+        .mainContainer{
+            height: 310px;
+            width: 310px;
+            background-color: peru;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="dragContainer" id="itemContainer" draggable="true" ondragstart="drag(event)"></div>
+
+    <div class="mainContainer" id = "mainContainer" ondragover="allowDrag(event)" ondrop="drop(event)"></div>
+
+    <script>
+
+        function drag(e){
+
+            // e.dataTransfer.setData("text/plain" , e.target.id);
+
+            e.dataTransfer.setData("text/html", "<b> Hello, Hope You enjoyed JS</b>")
+
+
+        }
+        function allowDrag(e){
+            e.preventDefault();
+
+            
+        }
+
+        function drop(e){
+            e.preventDefault()
+
+            // let id = e.dataTransfer.getData("text/plain" );
+
+
+            // console.log(id);
+
+            // let element = document.getElementById(id);
+
+            // e.target.append(element);
+
+            var data = e.dataTransfer.getData("text/html");
+
+            var d1 = document.createElement("div");
+
+            d1.innerHTML = data;
+
+            e.target.append(d1);
+        }
+    </script>
+    
+</body>
+</html>

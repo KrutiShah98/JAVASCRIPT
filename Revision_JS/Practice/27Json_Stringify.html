@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- json----javascript object notation
+
+    json e.g  let obj={"name":"kruti","subject":"english"}
+
+    object e.g  let obj={name:"kruti",subject:"english"} -->
+
+
+    <script>
+
+        let obj= {name:"kruti",subject:"english"};
+
+        console.log(obj);
+
+        //json stingify: conver js object into json format
+
+        let json_example=JSON.stringify(obj);
+        console.log(json_example);
+
+        //JSON PARSE:CONVER BACK JSON TO JAVASCRIPT OBJECT FORMAT
+
+        let obj_example=JSON.parse(json_example);
+        console.log(obj_example);
+    </script>
+
+</body>
+</html>

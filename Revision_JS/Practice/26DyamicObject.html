@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" placeholder="Enter Name" id="nameid">
+    <br>
+    <input type="text" placeholder="Enter Subject" id="subid">
+    <br>
+    <input type="submit" value="submit" id="submit">
+    <br>
+    <ul id="myul">
+
+    </ul>
+
+    <script>
+        let obj = {};
+        let submit = document.getElementById("submit");
+        submit.addEventListener("click", function () {
+            let name = document.getElementById("nameid").value;
+            let subject = document.getElementById("subid").value;
+
+            console.log(name);
+            console.log(subject);
+            obj['username'] = name;
+            obj['subject'] = subject;
+            console.log(obj);
+
+        //  for(let key in obj){
+        //     console.log(key);
+
+        //     console.log(obj[key]);
+
+        //     let li=document.createElement('li');
+        //     li.textContent=key+" ..."+obj[key];
+        //     myul.append(li);
+        //  }
+
+        })
+      
+
+    </script>
+
+</body>
+
+</html>

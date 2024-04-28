@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class parent
+        {
+            dispaly()
+            {
+                console.log("Hello Parent class is here");
+            }
+           
+        }
+        class Child extends parent{
+             dispaly()   
+             {
+                super.dispaly();
+                console.log("Hello Chid class dispaly method is here");
+             }
+            }
+
+            let obj= new Child();
+            obj.dispaly();
+    </script>
+</body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: url(Images/bgipl.jpg)no-repeat center center/cover;
+            width: 100%;
+            height: 100vh;
+            /* opacity: 0.5; */
+            /* filter: brightness(50%); */
+            position: relative;
+
+        }
+
+        div img {
+            width: 159px;
+            height: 159px;
+            /* border: 1px blue solid; */
+            margin-left: 5px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .iplteams {
+            display: flex;
+        }
+
+        .selected {
+            width: 159px;
+            height: 100px;
+            /* border: 2px solid red; */
+            position: absolute;
+            top: 42%;
+            left: 29%;
+        }
+
+        #random {
+            width: 159px;
+            height: 100px;
+            /* border: 2px solid red; */
+            position: absolute;
+            top: 40%;
+            left: 60%;
+        }
+
+        .vs {
+            position: absolute;
+            left: 48%;
+            color: rgb(10, 5, 5);
+            top: 48%;
+        }
+
+        #csk img:hover {
+            color: #494949 !important;
+            border-radius: 50px;
+            border-color: #494949 !important;
+            transition: all 0.3s ease 0s;
+            /* transform: scale(0.9);
+            box-shadow: 10px 10px 15px #ffee10; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="iplteams">
+        <div id="csk"><img src="Images/csk.jpg" alt="" class="cs"></div>
+        <div id="kkr"><img src="Images/kkr.jfif" alt="csk"></div>
+        <div id="mi"><img src="Images/mi.png" alt="csk"></div>
+        <div id="srh"><img src="Images/srh.jpeg" alt="csk"></div>
+        <div id="rr"><img src="Images/rr.png" alt="csk"></div>
+        <div id="gt"><img src="Images/GT.jfif" alt="csk"></div>
+        <div id="dc"><img src="Images/dc.jfif" alt="csk"></div>
+        <div id="dc"><img src="Images/pbk.png" alt="csk"></div>
+
+    </div>
+
+    <div class="selected">
+        <img src=" " alt="" class="se">
+    </div>
+    <h1 class="vs">VS</h1>
+    <div id="random">
+  <img src="" alt="" id="hidden">
+    </div>
+
+
+    <script>
+
+        let array=[];
+
+let selected_team=document.querySelectorAll(".iplteams div img");//getting images list
+// console.log(selected_team);
+
+selected_team.forEach(function(st){   //forevery image which is selected
+
+    array.push(st.getAttribute("src")); //gettting images in array using push
+    console.log(st);
+
+st.addEventListener("click",function(){ 
+
+// getting each selected imagePath
+// console.log(st);  
+
+let st=this.getAttribute("src");//get src attribute for selected img
+// console.log(st);
+
+let stimg=document.querySelector(".se");//where to show selected img
+
+stimg.setAttribute("src",st);//set src attribute which src we got!
+
+// filter for not getting same team
+
+let filterteam=array.filter((selected_team)=> selected_team!== st);
+// console.log(filterteam);
+
+
+//getting random image
+
+let random_team=Math.floor(Math.random()*filterteam.length);
+// console.log(random_team[length]);
+
+
+
+let imageofrandom=array[random_team];
+// console.log(imageofrandom);
+
+let team_opp = document.getElementById("random");
+                        random.setAttribute("src",imageofrandom);
+
+                        let hidden = document.getElementById("hidden");
+                        hidden.src = filterteam[random_team]
+
+
+
+
+
+
+})
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//         let ImageArr=[];
+
+//         let selected_team = document.querySelectorAll(".iplteams div img");  //
+//            console.log(selected_team);
+
+//         selected_team.forEach(function (st) {
+
+//             ImageArr.push(st.src);
+
+
+//       st.addEventListener("click", function (e) {
+//                         let team = this.getAttribute("src")    
+//                         // console.log(e);
+//                         let mainteam=document.querySelector(".se");
+//                         // console.log(mainteam);
+//                         mainteam.setAttribute("src",team);
+
+
+
+//                 //getting opposition random team
+
+//          let random_team = Math.floor(Math.random() * selected_team.length);
+//          console.log(random_team);
+
+//          let rt_src=this.getAttribute("src");
+//         //  console.log(rt_src);
+
+// random_team.getAttribute("src")
+
+
+
+
+
+
+
+
+       
+
+
+              
+
+
+//                 // let opp_team=document.getElementsByClassName("random");
+//                 // opp_team.src=ImageArr[random_team];
+
+
+//                 // console.log(random_team);
+//                 // var rt_src = selected_team[random_team].getAttribute("src");
+//                 // console.log(rt_src);
+
+//                 // var randomImgC=document.createElement('img');
+//                 // randomImgC.src=rt_src;
+//                 // randomImgC.className="random";
+//                 // randomImgC.innerHTML="";
+//                 // random.appendChild(randomImgC);
+
+
+
+
+//             })
+//         })
+
+
+    </script>
+</body>
+
+</html>
